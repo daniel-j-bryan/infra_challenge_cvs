@@ -50,6 +50,7 @@ resource "google_sql_database_instance" "main" {
   database_version = "POSTGRES_15"
   region           = "us-central1"
   root_password    = var.root_password
+  maintenance_version = "1.1"
 
   settings {
     # Second-generation instance tiers are based on the machine
