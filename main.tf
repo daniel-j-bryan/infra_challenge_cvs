@@ -16,7 +16,7 @@ terraform {
 }
 
 provider "google" {
-  credentials = file("dbryan-gcp-creds.json")
+  #credentials = file("dbryan-gcp-creds.json")
   project     = "hc-a026aae342044cebb2cdb5a1af8"
   region      = "us-central1"
   zone        = "us-central1-c"
