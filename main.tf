@@ -23,7 +23,7 @@ provider "google" {
 }
 
 resource "google_compute_instance" "vm_instance" {
-  name         = "cvs-instance-02"
+  name         = "cvs-instance-03"
   machine_type = "e2-micro"
 
   boot_disk {
