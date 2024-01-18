@@ -16,14 +16,14 @@ terraform {
 }
 
 provider "google" {
-  credentials = file("dbryan-gcp-creds.json")
+  #credentials = file("dbryan-gcp-creds.json")
   project     = "hc-a026aae342044cebb2cdb5a1af8"
   region      = "us-central1"
   zone        = "us-central1-c"
 }
 
 resource "google_compute_instance" "vm_instance" {
-  name         = "cvs_instance_01"
+  name         = "cvs-instance-02"
   machine_type = "e2-micro"
 
   boot_disk {
@@ -50,6 +50,7 @@ resource "google_sql_database_instance" "main" {
   database_version = "POSTGRES_15"
   region           = "us-central1"
   root_password    = var.root_password
+  maintenance_version = "1.1"
 
   settings {
     # Second-generation instance tiers are based on the machine
