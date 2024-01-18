@@ -23,7 +23,7 @@ provider "google" {
 }
 
 resource "google_compute_instance" "vm_instance" {
-  name         = "cvs-instance-04"
+  name         = "cvs-instance-05"
   machine_type = "e2-micro"
 
   boot_disk {
@@ -47,7 +47,7 @@ resource "google_compute_network" "vpc_network" {
 
 resource "google_sql_database_instance" "main" {
   name             = "cvs-instance"
-  database_version = "POSTGRES_15"
+  database_version = "POSTGRES_16"
   region           = "us-central1"
   root_password    = var.root_password
 
