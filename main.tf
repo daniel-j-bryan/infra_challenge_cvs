@@ -22,7 +22,7 @@ provider "google" {
   zone        = "us-central1-c"
 }
 
-resource "google_compute_instance" "vm_instance" {
+/* resource "google_compute_instance" "vm_instance" {
   name         = "cvs-instance-05"
   machine_type = "e2-micro"
 
@@ -58,3 +58,4 @@ resource "google_sql_database_instance" "main" {
     #user_labels = var.custom_labels
   }
 }
+ */
